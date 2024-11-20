@@ -7,7 +7,15 @@ const authRoutes = require('./routes/AuthRoutes')
 const ecoPontoRoutes = require('./routes/EcoPontoRoutes')
 const materialDataRoutes = require('./routes/MaterialDataRoutes')
 PORT = process.env.PORT
-app.use(cors())
+
+
+app.use(cors({
+    origin: process.env.CORS_ORIGIN,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true // 
+}))
+
+
 app.use(express.json())
 
 
