@@ -6,7 +6,7 @@ const pool = require('./config/db')
 const authRoutes = require('./routes/AuthRoutes')
 const ecoPontoRoutes = require('./routes/EcoPontoRoutes')
 const materialDataRoutes = require('./routes/MaterialDataRoutes')
-PORT = process.env.PORT
+PORT = process.env.PORT || 8080
 
 
 app.use(cors({
